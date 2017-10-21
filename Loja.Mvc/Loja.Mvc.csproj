@@ -167,7 +167,6 @@
     </Compile>
     <Compile Include="Helpers\Mapeamento.cs" />
     <Compile Include="Areas\Vendas\Models\ProdutoViewModel.cs" />
-    <Compile Include="Hub\LeilaoHub.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -194,6 +193,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\Leiloes\Details.js" />
     <Content Include="Scripts\methods_pt.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
@@ -224,6 +224,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Vendas\Views\Shared\" />
+    <Folder Include="Hub\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
