@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Loja.Mvc.Areas.Vendas.Models.ProdutoViewModel>
+
+@{
+    ViewBag.Title = "Produtos em Leilão";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Preco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estoque)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoriaNome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmLeilao)
+        </th>
+        <th></th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Preco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estoque)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoriaNome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmLeilao)
+        </td>
+        <td>
+            <img src="~/ImagemProduto/Miniatura?produtoId=@item.Id" title="@item.Nome" class="img-circle" />
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id=item.Id }, new { target = "_blank"}) |
+        </td>
+    </tr>
+}
+
+</table>
